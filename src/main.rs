@@ -61,7 +61,13 @@ fn main() {
             );
         }
         "ffind" => {
-            let file = File::open(&fm.path).unwrap();
+            let file = match File::open(&fm.path) {
+                Ok(f) => f,
+                Err(why) => {
+                    println!("[rustfm] Error: {why}");
+                    return ();
+                }
+            };
             let reader = BufReader::new(file);
             for (i, line) in reader.lines().enumerate() {
                 let line = line.unwrap();
