@@ -1,21 +1,22 @@
 use std::env::args;
 use std::fs::{File, OpenOptions};
-use std::io::{self, BufRead, BufReader, BufWriter, Read, Write};
+use std::io::{BufRead, BufReader, Read, Write};
 use std::process::exit;
-
-struct Fm {
+struct Fm
+{
     command: String,
     path: String,
     data: Option<String>,
 }
-
 fn main() {
+    // collecting string arguments in Vector of String type
     let args: Vec<String> = args().collect();
-
+    // check if arguments are less than 3 or more than 4, call the `param`
     if args.len() < 3 || args.len() > 4 {
         param();
     }
-    let mut fm = Fm {
+    // `Fm` struct initializing
+    let fm = Fm {
         command: args[1].clone(),
         path: args[2].clone(),
         data: if args.len() > 3 {
@@ -24,13 +25,13 @@ fn main() {
             None
         },
     };
+    // Matching commands
     match fm.command.as_str() {
         "fread" => {
             let mut fs: File = match File::open(&fm.path) {
                 Ok(f) => f,
                 Err(why) => {
                     println!("[rustfm] Error: {why}");
-
                     return ();
                 }
             };
@@ -45,9 +46,6 @@ fn main() {
             println!("{buf}");
         }
         "fwrite" => {
-            // using `unwrap()` while testing.
-            // in future, of course, we'll handle the Errors
-
             let mut file = OpenOptions::new()
                 .write(true)
                 .append(true)
@@ -63,14 +61,35 @@ fn main() {
             );
         }
         "ffind" => {
-            println!("Ok: ffind");
+            let file = File::open(&fm.path).unwrap();
+            let reader = BufReader::new(file);
+            for (i, line) in reader.lines().enumerate() {
+                let line = line.unwrap();
+                if let Some(data) = &fm.data.clone() {
+                    if line.contains(data) {
+                        println!(
+                            "({}) Found `{}`: {} at line {}",
+                            &fm.path,
+                            &fm.data.clone().unwrap(),
+                            line,
+                            i + 1
+                        );
+                    }
+                }
+            }
         }
         "fcreate" => {
-            println!("Ok: fcreate");
+            let file = match File::create(&fm.path) {
+                Ok(f) => f,
+                Err(why) => {
+                    println!("[rustfm] Error: {why}");
+                    return ();
+                }
+            };
+            println!("({}) created successfully!", &fm.path);
         }
-        "fremove" => {
-            println!("Ok: fremove");
-        }
+        // if the commands do not satisfy many of the commands
+        // defined here, then this is an "unknown command" and we call "param`
         _ => {
             param();
         }
