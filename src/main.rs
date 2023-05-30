@@ -2,6 +2,11 @@ use std::env::args;
 use std::fs::{File, OpenOptions};
 use std::io::{BufRead, BufReader, Read, Write};
 use std::process::exit;
+
+
+// constant global variable that contains current version of app
+const VERSION: &'static str = "v0.1.1";
+
 struct Fm
 {
     command: String,
