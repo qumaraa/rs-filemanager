@@ -108,6 +108,7 @@ fn main() {
 }
 
 fn param() {
+    eprintln!("{VERSION}");
     eprintln!("$ Usage:  <command> <path> <data>");
     eprintln!("Commands:\n\tfwrite\n\tfread\n\tffind\n\tfcreate\n\tfremove");
     exit(1);
