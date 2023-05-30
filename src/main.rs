@@ -5,7 +5,7 @@ use std::process::exit;
 
 
 // constant global variable that contains current version of app
-const VERSION: &'static str = "v0.1.1";
+const VERSION: &'static str = "v0.1.1@alpha";
 
 struct Fm
 {
