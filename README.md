@@ -15,7 +15,7 @@ git clone https://github.com/alexanderqmv/rs-filemanager.git
 ```shell
 cargo build
 ```
-###### 2. Cargo Run
+###### 3. Cargo Run
 ```shell
 cargo run
 ```
