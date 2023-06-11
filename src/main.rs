@@ -7,8 +7,7 @@ use std::process::exit;
 // constant global variable that contains current version of app
 const VERSION: &'static str = "v0.1.1@alpha";
 
-struct Fm
-{
+struct Fm {
     command: String,
     path: String,
     data: Option<String>,
@@ -111,5 +110,5 @@ fn param() {
     eprintln!("{VERSION}");
     eprintln!("$ Usage:  <command> <path> <data>");
     eprintln!("Commands:\n\tfwrite\n\tfread\n\tffind\n\tfcreate\n\tfremove");
-    exit(1);
+    exit(1); // return error code (1)
 }
