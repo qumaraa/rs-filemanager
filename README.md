@@ -21,7 +21,6 @@ cargo run
 ```
 
 
-
 ### You will see:
 ```shell
 $ Usage:  <command> <path> <data>
@@ -33,5 +32,4 @@ Commands:
         fremove
 
 ```
-
 ## Contribution
