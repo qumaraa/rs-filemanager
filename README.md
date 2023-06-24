@@ -1,7 +1,7 @@
 ## rustfm (beta)
 rustfm - A simple and powerful CLI-based File Manager developed in Rust Programming Language.
  
-[![Version](https://img.shields.io/badge/version-0.1.1@alpha-blue)]()
+[![Version](https://img.shields.io/badge/version-0.1.2@alpha-blue)]()
 [![RustfmtDocs](https://img.shields.io/badge/rustfm-docs-red)]()
 [![Discussions](https://img.shields.io/badge/discussions-goto-purple)]()
 [![Devs](https://img.shields.io/badge/dev-QMVCorp.-orange)]()
