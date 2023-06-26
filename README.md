@@ -36,5 +36,5 @@ Commands:
 - [x] - Bugs & Errors fixed.
 - [x] - `fremove` command added (NEW).
 - [x] - Code optimization.
-- [x] - Fixed errors with `mod`ules & `crates.io v0.1.74` (other versions was yanked).  
+- [x] - Fixed errors with `crates-io`.  
 ## [Contribution](qmvscorpio@gmail.com) (tap)
