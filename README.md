@@ -37,4 +37,4 @@ Commands:
 - [x] - `fremove` command added (NEW).
 - [x] - Code optimization.
 - [x] - Fixed errors with `crates-io`.  
-## [Contribution](qmvscorpio@gmail.com) (tap)
+## [Contribution]([qmvscorpio@gmail.com](https://mail.google.com/mail/u/0/#inbox?compose=SxfkdrJSWKVGKSWpNkxDqXnBqBFXXPWgjZBcvXCTMcGWKLmtnRQSKBqtDDJPWVktrBWKcnmgGjFdPprpVKTSvdZvfdtbZhJkqFchpcQJhQfcxxJsdvq)https://mail.google.com/mail/u/0/#inbox?compose=SxfkdrJSWKVGKSWpNkxDqXnBqBFXXPWgjZBcvXCTMcGWKLmtnRQSKBqtDDJPWVktrBWKcnmgGjFdPprpVKTSvdZvfdtbZhJkqFchpcQJhQfcxxJsdvq) (tap)
