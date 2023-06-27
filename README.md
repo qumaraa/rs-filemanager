@@ -6,6 +6,7 @@ rustfm - A simple and powerful CLI-based File Manager developed in Rust Programm
 [![Discussions](https://img.shields.io/badge/discussions-goto-purple)](https://github.com/alexanderqmv/rs-filemanager/discussions/1)
 [![Devs](https://img.shields.io/badge/dev-QMVCorp.-orange)]()
 
+
 ## Build from source
 ###### 1. Clone Repo
 ```shell
